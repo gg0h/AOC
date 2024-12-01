@@ -17,30 +17,27 @@ void bubble(int v[], int n) {
     } while(swapped);
 }
 
+    
 int similarity(int l[], int r[], int n) {
-    int sum, rp, temp, old_rp;
-    rp = 0; sum = 0; temp = 0;
-    for (int j = 0; j < n; ++j) {
-	if (l[j] > r[rp]) {
-            do{
-              ++rp;
-	    } while(l[j] > r[rp] && rp < n -1 );
-	}
-        if (l[j] < r[rp]) continue;
-	if (l[j] == r[rp]) {
-	    old_rp = rp;
+    int ri ,li,count ,old_ri;
+    ri = li = count = old_ri = 0;
+    while(li < n && ri < n) {
+        if (l[li] == r[ri]) {
+	    old_ri = ri;
 	    do{
-                temp++;
-	        rp++;
-	    } while(l[j] == r[rp] && rp < n-1);
-	    rp = old_rp;
+    	        count += l[li];
+	        ri++;
+	    } while(l[li] == r[ri]);
+	    ri = old_ri;
+	    li++;
+	} else if (l[li] < r[ri]) {
+            li++;
+	} else { 
+	    ri++;
 	}
-	sum += l[j] * temp;
-	temp = 0;
-    } 
-    return sum;
+    }
+    return count;
 }
-
 
 int main(){
     int left[1000];
