@@ -15,6 +15,8 @@ void bubble(int v[], int n) {
 	}
     
     } while(swapped);
+
+
 }
 
     
