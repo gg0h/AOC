@@ -17,17 +17,10 @@ int main(){
         else
             magnitude = atoi(&buffer[1]);
 
-
-        printf("MAGNITUDE %d\n", magnitude);
-        printf("PASSWORD %d\n", password);
-        printf("POSITION %d\n", position);
-
         password += abs(magnitude/100);
         magnitude %= 100;
 
-        printf("NEW MAGNITUDE %d\n", magnitude);
-        printf("==========\n");
-        
+
         temp_position = position;
         temp_position += magnitude;
 
@@ -44,25 +37,24 @@ int main(){
             position = temp_position;
         }
 
-
     }
-    printf("====\n");
-    printf("a. %d\n",  0 % 100);
-    printf("b. %d\n",  -1 % 100);
-    printf("c. %d\n",  -100 % 100);
-    printf("d. %d\n",  -101 % 100);
-    printf("e. %d\n",  1 % 100);
-    printf("f. %d\n",  100 % 100);
-    printf("g. %d\n",  101 % 100);
-    printf("====\n");
-    printf("a1. %d\n",  0 / 100);
-    printf("b1. %d\n",  -1 / 100);
-    printf("c1. %d\n",  -100 / 100);
-    printf("d1. %d\n",  -101 / 100);
-    printf("e1. %d\n",  1 / 100);
-    printf("f1. %d\n",  100 / 100);
-    printf("g1. %d\n",  101 / 100);
-    printf("====\n");
+    // printf("====\n");
+    // printf("a. %d\n",  0 % 100);
+    // printf("b. %d\n",  -1 % 100);
+    // printf("c. %d\n",  -100 % 100);
+    // printf("d. %d\n",  -101 % 100);
+    // printf("e. %d\n",  1 % 100);
+    // printf("f. %d\n",  100 % 100);
+    // printf("g. %d\n",  101 % 100);
+    // printf("====\n");
+    // printf("a1. %d\n",  0 / 100);
+    // printf("b1. %d\n",  -1 / 100);
+    // printf("c1. %d\n",  -100 / 100);
+    // printf("d1. %d\n",  -101 / 100);
+    // printf("e1. %d\n",  1 / 100);
+    // printf("f1. %d\n",  100 / 100);
+    // printf("g1. %d\n",  101 / 100);
+    // printf("====\n");
 
     printf("%d\n", password);
 }
