@@ -14,7 +14,6 @@ int scan_largest(char* buffer, int n) {
 
 int main(){
     char buffer[MAX_LINE_LEN];
-    char slice[MAX_LINE_LEN];
     char digits[16] = {0};
     int offset, found_i;
     long long int sum = 0;
