@@ -12,8 +12,6 @@ struct range {
 };
 
 int main() {
-
-
     char buffer[MAX_LINE_LEN];
 
     struct range boundaries[NUM_RANGES];
