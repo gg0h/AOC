@@ -22,7 +22,6 @@ int main() {
     long long int low, upp;
 
     while(fgets(buffer, MAX_LINE_LEN, stdin)) {
-        //printf("%s", buffer);
         if (*buffer == 0x0a) break; //skip after empty line
         sscanf(buffer, "%lld-%lld", &low, &upp);
         for (int i = 0; i < iter; i++) {
@@ -46,7 +45,6 @@ int main() {
         }
         boundaries[iter].lower = low;
         boundaries[iter].upper = upp;
-        printf("lower: %lld, upper: %lld, difference (inc), %lld\n", boundaries[iter].lower, boundaries[iter].upper, boundaries[iter].upper - boundaries[iter].lower + 1);
         
         iter++;
     }
